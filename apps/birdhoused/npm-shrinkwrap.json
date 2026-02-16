@@ -184,9 +184,9 @@
       }
     },
     "node_modules/centrifuge": {
-      "version": "5.4.0",
-      "resolved": "https://registry.npmjs.org/centrifuge/-/centrifuge-5.4.0.tgz",
-      "integrity": "sha512-XFRaOkljFN8GvN0Z+8g/nhlTf93PIF9nz9eWXuZ/OfviUkXuQfNpGzzQMAWMrrPnQCqVNXEK8WxJbproT2TSnw==",
+      "version": "5.5.3",
+      "resolved": "https://registry.npmjs.org/centrifuge/-/centrifuge-5.5.3.tgz",
+      "integrity": "sha512-LPkWnsAxu7JaE5S738XiREzJIko3Pf/qnWb3kd0q/OR0OJONUbSdnZ5pKsEI2yFi/odQ89SYsHPhLuEeZFhp/g==",
       "license": "MIT",
       "dependencies": {
         "events": "^3.3.0",
