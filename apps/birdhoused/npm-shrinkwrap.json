@@ -816,9 +816,9 @@
       }
     },
     "node_modules/obs-websocket-js": {
-      "version": "5.0.7",
-      "resolved": "https://registry.npmjs.org/obs-websocket-js/-/obs-websocket-js-5.0.7.tgz",
-      "integrity": "sha512-SdSNSyrLVR6F0ogInKr7qcadV1tYaTUse/vbabxjkUL8hU3P3dyifxkZ7pEkDDrtCp3TkQ53Enx23kgZO0Cjcw==",
+      "version": "5.0.8",
+      "resolved": "https://registry.npmjs.org/obs-websocket-js/-/obs-websocket-js-5.0.8.tgz",
+      "integrity": "sha512-QDnQJMr5wuCoYugK02ggZ1/cvESs4KJDEK+UhGg0Ry35jnY8tK1Xr3KoPjKyoD6sd8G+WdtIdzuY+yUyPtogQQ==",
       "license": "MIT",
       "dependencies": {
         "@msgpack/msgpack": "^2.7.1",
