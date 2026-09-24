@@ -44,7 +44,7 @@ modules:
       ID: seaglav
       ID_LIKE: fedora
       NAME: SeaGL Aviary Linux
-      PRETTY_NAME: SeaGL Avian Linux 2025 (FROM Fedora Silverblue 42)
+      PRETTY_NAME: SeaGL Avian Linux 2025 (FROM Fedora Silverblue 44)
       CODE_NAME: '2025'
 
       IMAGE_VENDOR: SeaGL

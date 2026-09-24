@@ -4,7 +4,7 @@ name: aviary-linux-base
 description: SeaGL Aviary Linux (base software image)
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42
+image-version: 44
 
 modules:
   - type: rpm-ostree
