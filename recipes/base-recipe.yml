@@ -33,6 +33,12 @@ modules:
       - libreoffice
       - nextcloud-client
       - nextcloud-client-nautilus
+      # aviaryui build dependencies
+      # XXX MAYBE? Find a way to strip these out? All it would impact is base image download times in GitHub Actions, when rebuilding final images...
+      - meson
+      - cmake
+      - glib2-devel
+      - gtk4-devel
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/tarulia/obs-studio-plugins/repo/fedora-%OS_VERSION%/tarulia-obs-studio-plugins-fedora-%OS_VERSION%.repo
