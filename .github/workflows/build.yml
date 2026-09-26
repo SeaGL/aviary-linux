@@ -40,7 +40,7 @@ jobs:
         uses: blue-build/github-action@v1.11
         if: steps.filter.outputs.base-recipe == 'true'
         with:
-          cli_version:  v0.9.26
+          cli_version:  v0.9.37
           recipe: base-recipe.yml
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
