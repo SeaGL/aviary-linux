@@ -64,7 +64,6 @@ modules:
       - openziti
   - type: gnome-extensions
     install:
-      - 6433 # App menu is back
       - 5410 # Grand Theft Focus
 
   - type: signing
