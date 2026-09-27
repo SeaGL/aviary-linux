@@ -41,12 +41,3 @@ This procedure was tested on one of the conference's streaming laptops; you may 
 9. When rpm-ostree rebase` finishes (i.e. when `rpm-ostree status` reports `Status: idle`), reboot.
 10. In a terminal, rebase to the signed image with `sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/seagl/av-linux:latest`. You will have an `age` password prompt which you can either close or ignore (doesn't matter) - just open a new terminal window.
 11. When `rpm-ostree status` reports `Status: idle`, reboot.
-
-# How to Use
-
-## Containerfile
-
-This file defines the operations used to customize the selected image. It contains examples of possible modifications, including how to:
-- change the upstream from which the custom image is derived
-- add additional RPM packages
-- add binaries as a layer from other images
