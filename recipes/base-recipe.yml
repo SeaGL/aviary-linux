@@ -74,7 +74,7 @@ modules:
     snippets:
       - flatpak install --noninteractive --system im.riot.Riot
       - flatpak install --noninteractive --system org.pulseaudio.pavucontrol
-      - systemctl enable seagl-init-system-flatpak.service
+      - ln -s /usr/lib/systemd/system/seagl-init-system-flatpak.service /etc/systemd/system/multi-user.target.wants
       - mv /var/lib/flatpak /usr/lib/seagl-flatpak
   - type: gnome-extensions
     install:
