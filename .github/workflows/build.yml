@@ -38,7 +38,7 @@ jobs:
               - 'recipes/base-recipe.yml'
       - name: Build Aviary Base Image
         uses: blue-build/github-action@v1.13
-        if: steps.filter.outputs.base-recipe == 'true'
+        #if: steps.filter.outputs.base-recipe == 'true'
         with:
           cli_version:  v0.9.37
           recipe: base-recipe.yml
