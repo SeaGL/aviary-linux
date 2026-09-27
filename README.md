@@ -38,6 +38,6 @@ This procedure was tested on one of the conference's streaming laptops; you may 
    6. Set the password to `password`.
 9. Apply firmware updates in GNOME Software, if applicable. **This is very important** as once you've switched to Aviary Linux, you can't apply these anymore due to EFI partition naming shenanigans.
 8. In a terminal, run `sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/seagl/av-linux:latest`. The system should print logs of what it's doing as it works, but you can monitor progress of this step by running `rpm-ostree status` and/or `sudo journalctl -fu rpm-ostreed.service` in a new terminal window.
-9. When rpm-ostree rebase` finishes (i.e. when `rpm-ostree status` reports `Status: idle`), reboot.
+9. When rpm-ostree rebase finishes (i.e. when `rpm-ostree status` reports `Status: idle`), reboot.
 10. In a terminal, rebase to the signed image with `sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/seagl/av-linux:latest`. You will have an `age` password prompt which you can either close or ignore (doesn't matter) - just open a new terminal window.
 11. When `rpm-ostree status` reports `Status: idle`, reboot.
