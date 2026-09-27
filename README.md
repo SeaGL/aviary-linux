@@ -4,7 +4,13 @@
 
 This is a purpose-built, atomic/immutable Linux operating system designed to have everything needed to run live broadcasting on-site at [SeaGL](https://seagl.org/). It is intended to be installed on laptops that run broadcasting in each talk room, and is based on [Universal Blue](https://github.com/ublue-os) which is itself based on [Fedora Silverblue](https://fedoraproject.org/atomic-desktops/silverblue/).
 
-This template includes a Containerfile and a GitHub workflow for building the container image. Commits trigger container builds that are pushed to GitHub Container Registry.
+# Architecture
+
+This repo uses [BlueBuild](https://blue-build.org/) to build ostree-compatible container images. Commits trigger container builds that are pushed to GitHub Container Registry.
+
+There are _two_ container images in play, for performance reasons. The base image takes a long time to build (both inherently and because it is chunk-optimized after being built, to improve incremental upgrade performance) and includes almost all binary software distributed with Aviary. The final image builds on the base image and includes most configuration data in the system, as well as Aviary-specific scripts. It is not chunk-optimized, but observe that the vast, vast majority of the final image in terms of size has been optimized because these top non-optimized bits are extremely small.
+
+The purpose of this separation is to make it very fast to cut and deploy new releases that update only configuration, or that fix bugs in Aviary-specific code - on the order of a few minutes.
 
 # Prerequisites
 
