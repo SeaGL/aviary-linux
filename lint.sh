@@ -9,7 +9,7 @@ echo 'Checking that all `flatpak` invocations pass `--noninteractive --system`.'
 # We use () to make this a subshell to avoid ! not triggering a `set -e` bailout; see bash(1)'s documentation on this flag for more
 ( ! grep -rn --exclude-dir=.git flatpak | grep -ve seagl-init-system-flatpak.service -e /var/lib/flatpak -e 'BlueBuild default-flatpak' | grep -v -- '--noninteractive --system')
 
-for i in files/usr/*bin/*; do
+for i in files/usr/bin/*; do
 	echo 'Checking that `'"$i"'` contains `set -euo pipefail`.'
 	grep -q 'set -euo pipefail' $i
 done

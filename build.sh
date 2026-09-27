@@ -26,7 +26,6 @@ systemctl enable seagl-dconf-update-hack.service
 # Put some useful stuff in bash history so ^R muscle memory works (AJ relies on this a lot)
 cat > /etc/skel/.bash_history <<EOF
 $(ls /usr/bin/seagl* | xargs -n 1 basename)
-$(ls /usr/sbin/seagl* | xargs -n 1 basename)
 sudo rpm-ostree update
 sudo rpm-ostree usroverlay
 EOF

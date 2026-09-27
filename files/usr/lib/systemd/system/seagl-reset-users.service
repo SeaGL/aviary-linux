@@ -8,7 +8,7 @@ ConditionPathNotExists=/var/lib/seagl/users-created
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/sbin/seagl-reset-users
+ExecStart=/usr/bin/seagl-reset-users
 
 [Install]
 WantedBy=basic.target
