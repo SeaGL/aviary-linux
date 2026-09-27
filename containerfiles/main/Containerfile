@@ -10,11 +10,7 @@
 
 COPY build.sh /tmp/build.sh
 
-COPY bin/* /usr/bin/
 COPY vendor-bin/* /usr/bin/
-COPY sbin/* /usr/sbin/
-COPY systemd/* /usr/lib/systemd/system/
-COPY desktops/* /usr/share/applications/
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
