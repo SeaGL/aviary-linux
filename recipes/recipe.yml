@@ -36,6 +36,8 @@ modules:
     files:
       - source: usr
         destination: /usr
+      - source: vendor-bin
+        destination: /usr/bin
       - source: etc
         destination: /etc
       # TODO lol should this just use the above directory? I didn't because then it makes the dir hidden in the development repo filesystem...
