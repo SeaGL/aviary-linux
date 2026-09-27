@@ -68,6 +68,14 @@ modules:
       - zrok
     optfix:
       - openziti
+  # We use this manual install instead of BlueBuild default-flatpaks because this
+  # way, Flatpaks are shipped with the image, not installed at runtime.
+  - type: script
+    snippets:
+      - flatpak install --noninteractive --system im.riot.Riot
+      - flatpak install --noninteractive --system org.pulseaudio.pavucontrol
+      - systemctl enable seagl-init-system-flatpak.service
+      - mv /var/lib/flatpak /usr/lib/seagl-flatpak
   - type: gnome-extensions
     install:
       - 5410 # Grand Theft Focus

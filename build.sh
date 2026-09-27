@@ -4,14 +4,6 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-### Install packages
-
-flatpak install --noninteractive --system im.riot.Riot
-flatpak install --noninteractive --system org.pulseaudio.pavucontrol
-
-systemctl enable seagl-init-system-flatpak.service
-mv /var/lib/flatpak /usr/lib/seagl-flatpak
-
 ### Configure system
 
 systemctl set-default graphical.target
