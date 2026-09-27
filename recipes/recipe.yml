@@ -61,9 +61,9 @@ modules:
       BUG_SUPPORT_URL: https://github.com/SeaGL/av-linux/issues
       LOGO_ICON: seagl-logo-icon
       # TODO LOGO_COLOR
-  - type: containerfile
-    containerfiles:
-      - main
+  - type: script
+    scripts:
+      - legacy-build.sh
 
   - type: signing
 
