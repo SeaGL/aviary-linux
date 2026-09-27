@@ -53,7 +53,7 @@ modules:
         cd build &&
         sudo make install &&
         sudo mv /usr/lib/obs-plugins/source-record.so /usr/lib64/obs-plugins # TODO figure out how to not do this
-  # This is early and targeted so that we can install Zrok in lower layers,
+  # This is early and scoped small so that we can install Zrok in lower layers,
   # but not invalidate larger lower layers whenever anything in /etc changes
   - type: files
     files:
