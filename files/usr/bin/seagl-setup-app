@@ -37,6 +37,7 @@ elif [ "$arg" == nextcloud ]; then
 	sleep 10
 	start_and_link_app com.nextcloud.desktopclient.nextcloud
 elif [ "$arg" == firefox ]; then
+    sudo cp /usr/etc/firefox/policies/policies.json /etc/firefox/policies/policies.json
 	sudo sed -i "s;AV_TEST_RESULTS_PLACEHOLDER;$(get_config_value .avTestResultsSheetURL);" /etc/firefox/policies/policies.json
 	sudo sed -i "s;__ATTEND_PORTAL_CREDENTIALS__=t;userId=%40$(get_config_value .matrixCredentials.user)%3A$(date +%Y).seagl.org\&password=$(get_config_value .matrixCredentials.password | sed 's/ /%20/g');" /etc/firefox/policies/policies.json
 	sudo sed -i "s;__REMOTE_SPEAKER_TALK_URLS_PLACEHOLDER__;$(get_config_value .remoteSpeakerJitsiURLs);" /etc/firefox/policies/policies.json
